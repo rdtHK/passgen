@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+# TODO: Add optional master password argument
+# TODO: Better help.
+
 import string, hashlib, argparse, getpass
 
 DEFAULT_ALLOWED_CHARS = string.ascii_letters + string.digits
@@ -24,6 +27,7 @@ parser.add_argument('--allowed',
 )
 parser.add_argument('--length',
     default=DEFAULT_PASSWORD_LENGTH,
+    type=int,
     help='password length.'
 )
 parser.add_argument('website')
